@@ -1,0 +1,256 @@
+
+/*Sophia Alves de Souza 3c 27/08/2025*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --rosa-suave: #FFD1DC;
+    --azul-bebe: #B3DFF2;
+    --verde-pastel: #C7E8CA;
+    --bege-claro: #F5E9DC;
+    --contraste-fundo: #000000;
+    --contraste-texto: #FFFFFF;
+    --contraste-destaque: #FFD700;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bege-claro);
+    color: #333;
+}
+
+header {
+    background-color: var(--rosa-suave);
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+.nav-img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    border-radius: 0%;
+}
+
+.nav-link {
+    color: #5A3E36;
+    font-weight: 600;
+}
+
+.inicio-fundo {
+    background-image: url('img/fundo.jpeg');
+    background-size: cover;
+    background-position: right;
+    border-radius: 80px;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-inicio {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+@media (min-width: 992px) {
+    .inicio-fundo {
+        min-height: 606px;
+    }
+    
+    .img-inicio {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45%;
+        max-width: 48rem;
+        margin: 0;
+    }
+    
+    .esquerda-conteudo {
+        width: 45%;
+    }
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.botao-inicio {
+    background-color: var(--azul-bebe);
+    color: #000;
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    font-weight: 600;
+}
+
+.display-4 {
+    text-shadow: -5px 5px var(--azul-bebe);
+    color: #000;
+    font-family: 'Playfair Display', serif;
+}
+
+#tropicalia {
+    position: relative;
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: url('img/flor.png') top right no-repeat,
+                url('img/flor-esquerda.png') bottom left no-repeat;
+    background-size: 120px 120px;
+}
+
+@media (min-width: 768px) {
+    #tropicalia {
+        background-size: 180px 180px;
+    }
+}
+
+#tropicalia .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #5A3E36;
+}
+
+#galeria {
+    background-color: var(--verde-pastel);
+}
+
+.fundo-galeria {
+    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+    background-size: 120px 120px;
+}
+
+@media (min-width: 768px) {
+    .fundo-galeria {
+        background-size: 180px 180px;
+    }
+}
+
+#contato {
+    background-image: url('img/4965007.jpg');
+    background-size: cover;
+    padding: 4rem 0;
+}
+
+.formulario {
+    background-color: var(--bege-claro);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario button {
+    background-color: var(--rosa-suave);
+    border: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.form-control {
+    background-color: #fdf7f1;
+}
+
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+.alto-contraste {
+    background-color: var(--contraste-fundo);
+    color: var(--contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--contraste-fundo);
+    color: var(--contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--contraste-destaque);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--contraste-destaque);
+    color: var(--contraste-fundo);
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--contraste-fundo);
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
+}
+
+.galeria-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+    transform: scale(1.03);
+}
+
+@media (min-width: 768px) {
+    .galeria-img {
+        height: 300px;
+    }
+}
